@@ -17,7 +17,7 @@ TextTheme textTheme() {
   );
 }
 
-/* p17. 기존 코드. textTheme 속성때문에 정의가 안 되고 빌드시 에러. 플러터 업그레이드시 변경된 듯
+/* p17. 기존 코드. textTheme 속성때문에 정의가 안 되고 빌드시 에러. 플러터 업그레이드시 titleTextStyle: 로 변경된 듯
 AppBarTheme appTheme() {
   return AppBarTheme(
     centerTitle: false,
@@ -31,19 +31,23 @@ AppBarTheme appTheme() {
 }
 */
 
-// 위 부분 수정 코드
+// 위 기존 코드를 수정한 코드
 AppBarTheme appTheme() {
   return AppBarTheme(
     centerTitle: false,
     color: Colors.white,
-    // 앱바 배경색.
-    // 앱바의 폰트색상은 기본 white 인 모양. 배경색을 white 로 한 경우, 폰트색상은 유색으로 처리해야 글자가 보임.
+    // 앱바 배경색
+    // 앱바의 기본 배경은 파란색, 기본 폰트색은 흰색
+    // 배경색을 white 로 하고, 처음 따라하기 했을 때는 폰트가 화이트로 나와서 애먹었는데 다시 따라하니 별다른 처리를 안 해도 블랙으로 잘 나왔다.
+    // 어딘가 코딩을 잘못한 곳이 있었나?
     elevation: 0.0,
+    // 앱바 아래로 그림자 효과를 없앤다
     titleTextStyle: textTheme().titleLarge,
-    // titleTextStyle: textTheme().headline6 를 수정
+    // titleTextStyle: textTheme().headline6 를 안드로이드 스튜디오가 추천하는 대로 수정
   );
 }
 
+// ThemeData 타입의 theme() 메소드
 ThemeData theme() {
   return ThemeData(
     scaffoldBackgroundColor: Colors.white,
