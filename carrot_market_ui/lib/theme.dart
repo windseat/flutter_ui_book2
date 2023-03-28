@@ -37,7 +37,7 @@ AppBarTheme appTheme() {
     centerTitle: false,
     color: Colors.white,
     // 앱바 배경색.
-    // 앱바의 폰트색상은 기본 white 인 모양. 배경색을 white로 한 경우, 폰트색상은 유색으로 처리해야 글자가 보임.
+    // 앱바의 폰트색상은 기본 white 인 모양. 배경색을 white 로 한 경우, 폰트색상은 유색으로 처리해야 글자가 보임.
     elevation: 0.0,
     titleTextStyle: textTheme().titleLarge,
     // titleTextStyle: textTheme().headline6 를 수정
@@ -49,5 +49,11 @@ ThemeData theme() {
     scaffoldBackgroundColor: Colors.white,
     textTheme: textTheme(),
     appBarTheme: appTheme(),
+
+    // primaryColor: Colors.orange,
+    // p25 이미지에는 하단바의 아이콘이 오렌지색으로 나온다. 이 부분이 영향을 줄 것이라 예상했으나 디폴트 색상이라고 생각되는 파란색으로 현재 위치 아이콘이 표시된다.
+    
+    primarySwatch: Colors.orange,
+    // primaryColor 대신에 사용하니 현재 위치 아이콘이 주황색으로 표시
   );
 }

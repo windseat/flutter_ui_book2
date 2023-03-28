@@ -1,6 +1,6 @@
 # carrot_market_ui
 
-A new Flutter project.
+모두가 할 수 있는 플러터 UI 실전 - 모두의 마켓 UI 만들어 보기
 
 ## Getting Started
 

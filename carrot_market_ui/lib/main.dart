@@ -17,7 +17,8 @@ class CarrotMarketUI extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: const MainScreens(),
       theme: theme(),
-      // 타이핑을 하는 중에 노란 전구가 하란대로 return const MaterialApp() 로 하면 빌드시 theme() 가 const 가 아니라(error: Invalid constant value. (invalid_constant at [carrot_market_ui] lib\main.dart:19) 는 에러가 난다.
+      // 타이핑을 하는 중에 노란 전구가 하란대로 return const MaterialApp() 로 하면
+      // 빌드시 theme() 가 const 가 아니다 (error: Invalid constant value. (invalid_constant at [carrot_market_ui] lib\main.dart:19) 라는 에러가 난다.
     );
   }
 }
