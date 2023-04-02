@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-import 'package:carrot_market_ui/theme.dart';
+import 'package:carrot_market_ui/models/product.dart';
+import 'package:carrot_market_ui/screens/home/components/product_item.dart';
+
+//import 'package:carrot_market_ui/theme.dart';
+//p32에는 필요했는데, p42에는 사용안함으로 표시되어 주석처리 함
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -59,7 +63,25 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(),
+      //body: Container(),
+      //위 소스는 p34까지 따라한 것
+
+      //p38 사진 모습 보기 위해 /models/product.dart 만들고 아래에 p42의 소스를 먼저 따라함
+      body: ListView.separated(
+        separatorBuilder: (context, index) => const Divider(
+          height: 0,
+          indent: 16,
+          color: Colors.grey,
+        ),
+        itemBuilder: (context, index) {
+          return ProductItem(
+            key: key,
+            // 소스코드에는 윗줄이 없으나 에러 나서 넣었음
+            product: productList[index],
+          );
+        },
+        itemCount: productList.length,
+      ),
     );
   }
 }
