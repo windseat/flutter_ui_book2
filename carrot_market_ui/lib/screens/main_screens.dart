@@ -97,6 +97,14 @@ class _MainScreensState extends State<MainScreens> {
         backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         currentIndex: _selectedIndex,
+        // 아래 TIP 추가하기 전까지는 현재 선택된 활성화된 아이콘의 색상은 오렌지색
+        // 비활성화된 아이콘의 색상은 그레이
+
+        //p43 TIP 추가
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black54,
+        // 현재 선택된 활성화된 아이콘의 색상이 블랙으로
+
         onTap: (index) {
           setState(() {
             _selectedIndex = index;
