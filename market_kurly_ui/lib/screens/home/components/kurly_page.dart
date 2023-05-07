@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:market_kurly_ui/screens/home/components/kurly_banner_item.dart';
 
 class KurlyPage extends StatelessWidget {
   const KurlyPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ListView(
+      children: [
+        SizedBox(
+          height: 335,
+          child: KurlyBannerItem(),
+        ),
+      ],
+    );
   }
 }
